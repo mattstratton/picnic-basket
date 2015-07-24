@@ -1,0 +1,33 @@
+{
+  "name": "picnic-basket",
+  "description": "Installs/Configures picnic-basket",
+  "long_description": "Installs/Configures picnic-basket",
+  "maintainer": "Chef Software, Inc",
+  "maintainer_email": "mattstratton@chef.io",
+  "license": "apache2",
+  "platforms": {
+  },
+  "dependencies": {
+    "vagrant": "~> 0.2.2",
+    "chocolatey": "~> 0.4.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.0",
+  "source_url": "",
+  "issues_url": ""
+}
