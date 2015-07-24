@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: picnic-basket
-# Recipe:: default
+# Recipe:: vagrant
 #
 # Copyright 2015 Chef Software, Inc
 #
@@ -16,4 +16,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe 'picnic-basket::vagrant'
+include_recipe 'vagrant::default'
+
+%w[vagrant-omnibus vagrant-winrm].each do |plugin|
+  vagrant_plugin plugin
+end
