@@ -2,7 +2,7 @@ AllCops:
   Exclude:
     - vendor/**
     - metadata.rb
-    - cookbooks/**
+    - cookbooks/**/*
 
 AlignParameters:
   Enabled: false
