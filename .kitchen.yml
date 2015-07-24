@@ -28,4 +28,5 @@ suites:
   - name: default
     run_list:
         - recipe[picnic-basket::default]
+        - recipe[picnic-basket::conemu]
     attributes:
