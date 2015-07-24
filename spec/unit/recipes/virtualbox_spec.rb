@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: picnic-basket
-# Recipe:: default
+# Spec:: default
 #
 # Copyright 2015 Chef Software, Inc
 #
@@ -16,12 +16,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe 'picnic-basket::vagrant'
+require 'spec_helper'
 
-if node['platform'] == 'windows'
-  include_recipe 'chocolatey::default'
-end
+describe 'picnic-basket::virtualbox' do
+  context 'When all attributes are default, on an unspecified platform' do
+    let(:chef_run) do
+      runner = ChefSpec::ServerRunner.new
+      runner.converge(described_recipe)
+    end
 
-if node['picnic-basket']['install-virtualbox'] = true
-  include_recipe 'picnic-basket::virtualbox'
+    it 'converges successfully' do
+      chef_run # This should not raise an error
+    end
+  end
 end

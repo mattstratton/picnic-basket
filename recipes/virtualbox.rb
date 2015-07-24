@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: picnic-basket
-# Recipe:: default
+# Recipe:: virtualbox
 #
 # Copyright 2015 Chef Software, Inc
 #
@@ -16,12 +16,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe 'picnic-basket::vagrant'
-
-if node['platform'] == 'windows'
-  include_recipe 'chocolatey::default'
-end
-
-if node['picnic-basket']['install-virtualbox'] = true
-  include_recipe 'picnic-basket::virtualbox'
-end
+include_recipe 'virtualbox::default'
