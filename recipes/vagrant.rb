@@ -19,6 +19,6 @@
 
 include_recipe 'vagrant::default'
 
-%w[vagrant-omnibus vagrant-winrm].each do |plugin|
+%w(vagrant-omnibus vagrant-winrm).each do |plugin|
   vagrant_plugin plugin
 end
