@@ -17,3 +17,7 @@
 # limitations under the License.
 
 include_recipe 'picnic-basket::vagrant'
+
+if node["platform"] == "windows"
+  include_recipe 'chocolatey::default'
+end
