@@ -13,4 +13,4 @@ override['vagrant']['msi_version'] = ''
 #   default['virtualbox']['version'] = '5.0'
 # end
 
-default['picnic-basket']['install-virtualbox'] = true
+default['picnic-basket']['install-virtualbox'] = false
