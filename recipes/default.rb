@@ -22,6 +22,6 @@ if node['platform'] == 'windows'
   include_recipe 'chocolatey::default'
 end
 
-if node['picnic-basket']['install-virtualbox'] = true
+if node['picnic-basket']['install-virtualbox'] == true
   include_recipe 'picnic-basket::virtualbox'
 end
