@@ -18,5 +18,11 @@
 
 case node['platform_family']
   when 'windows'
+    cookbook_file "#{Chef::Config[:file_cache_path]}/oracle.cer" do
+      source 'oracle.cer'
+    end
+
+    execute "certutil -addstore -f 'TrustedPublisher' #{Chef::Config[:file_cache_path]}/oracle.cer"
+
     chocolatey 'virtualbox'
 end
