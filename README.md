@@ -4,7 +4,7 @@
 This cookbook is used to prepare a student's workstation for use in a Chef POC/workshop. It should install the necessary tools required, including:
 
 * Vagrant
-* VirtualBox
+* VirtualBox (not currently working)
 * Conemu (Windows only)
 * git client
 
