@@ -25,3 +25,7 @@ end
 if node['picnic-basket']['install-virtualbox'] == true
   include_recipe 'picnic-basket::virtualbox'
 end
+
+if node['picnic-basket']['install-git'] == true
+  include_recipe 'git::default'
+end

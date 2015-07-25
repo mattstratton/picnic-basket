@@ -14,3 +14,4 @@ override['vagrant']['msi_version'] = ''
 # end
 
 default['picnic-basket']['install-virtualbox'] = false
+default['picnic-basket']['install-git'] = true
