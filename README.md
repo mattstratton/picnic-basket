@@ -15,6 +15,7 @@ The cookbook should run all the usual preflight tests, from https://github.com/C
 
 ## Usage
 In theory, it should work like this:
+
 1. Install chef-client (or chefdk)
 1. Download zip version of this cookbook
 1. Extract cookbook to somewhere easy to access via terminal/console
