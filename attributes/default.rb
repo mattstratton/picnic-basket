@@ -15,3 +15,9 @@ override['vagrant']['msi_version'] = ''
 
 default['picnic-basket']['install-virtualbox'] = false
 default['picnic-basket']['install-git'] = true
+
+# Strip the filename off the URL
+require 'uri'
+default['picnic-basket']['chefdk']['install_url'] = 'https://opscode-omnibus-packages.s3.amazonaws.com/windows/2008r2/x86_64/chefdk-0.7.0-1.msi'
+uri = URI.parse(default['picnic-basket']['chefdk']['install_url'])
+default['picnic-basket']['chefdk']['filename'] = File.basename(uri.path)

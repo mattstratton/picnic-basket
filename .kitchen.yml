@@ -16,7 +16,7 @@ provisioner:
 platforms:
 - name: windows-2012R2
   driver_config:
-    box: win2k12r2
+    box: win2012r2
     box_url: #insert your own URL to your box here
     vm_hostname: false
   transport:
@@ -29,4 +29,5 @@ suites:
     run_list:
         - recipe[picnic-basket::default]
         - recipe[picnic-basket::conemu]
+        - recipe[picnic-basket::chefdk]
     attributes:
