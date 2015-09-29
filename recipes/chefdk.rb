@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: picnic-basket
-# Recipe:: default
+# Recipe:: chefdk
 #
 # Copyright 2015 Chef Software, Inc
 #
@@ -16,4 +16,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+url = node['picnic-basket']['chefdk']['install_url']
+filename = node['picnic-basket']['chefdk']['filename']
 
+remote_file "#{Chef::Config['file_cache_path']}/#{filename}" do
+  action :create
+  source url
+end
+
+windows_package "ChefDK" do
+  action :install
+  source "#{Chef::Config['file_cache_path']}/#{filename}"
+end
